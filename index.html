@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PROJECT</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 40px;
+      }
+      h1 {
+        font-size: 40px;
+        margin-bottom: 30px;
+      }
+      header {
+        text-align: center;
+        padding: 10 px;
+        color: black;l
+      }
+      nav {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      nav a {
+        text-decoration: none;
+        color: #333;
+        padding: 10px 20px;
+        margin: 0 10px;
+        background-color: #eeeeee;
+        border-radius: 5px;
+      }
+      section {
+        display: none;
+        margin: 20px 0;
+      }
+      section img {
+        width: 1000px;
+        display: block;
+        margin: 0 auto; /* 이미지를 가운데 정렬 */
+      }
+
+      main {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 20px 0;
+      }
+
+      .image-container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .image-container img {
+        margin-top: 30px;
+        width: 400px;
+        height: 580px;
+        border-radius: 10px;
+        transition: filter 0.3s ease-in-out;
+        cursor: pointer;
+      }
+      .image-container img:hover {
+        filter: brightness(0.8) grayscale(50%);
+      }
+      .image-container h3 {
+        font-size: 18px;
+        margin-top: 10px;
+      }
+
+      /* footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      } */
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>PROJECT</h1>
+    </header>
+
+    <main>
+      <div class="image-container">
+        <img
+          src="image/lookbookmain.jpg"
+          alt="Lookbook"
+          onclick="openNewWindow('lookbook.html')"
+          onmouseover="hoverImage(this)"
+          onmouseout="unhoverImage(this)"
+        />
+        <h3>Lookbook</h3>
+      </div>
+      <div class="image-container">
+        <img
+          src="image/beforeaftermain.png"
+          alt="Retouching"
+          onclick="openNewWindow('retouching.html')"
+          onmouseover="hoverImage(this)"
+          onmouseout="unhoverImage(this)"
+        />
+        <h3>Retouching</h3>
+      </div>
+      <div class="image-container">
+        <img
+          src="image/productmain.jpg"
+          alt="Product Photo"
+          onclick="openNewWindow('Product.html')"
+          onmouseover="hoverImage(this)"
+          onmouseout="unhoverImage(this)"
+        />
+        <h3>Product Photo</h3>
+      </div>
+    </main>
+    <script>
+      function openNewWindow(url) {
+        window.open(url, "_blank");
+      }
+    </script>
+  </body>
+</html>

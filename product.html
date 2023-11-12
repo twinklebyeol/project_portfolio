@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>product</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      header {
+        text-align: center;
+        padding: 10px;
+        color: black;
+      }
+      h1 {
+        margin-top: 50px;
+        font-size: 20px;
+      }
+      h2 {
+        text-align: center;
+      }
+      nav {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      nav a {
+        text-decoration: none;
+        color: #333;
+        padding: 10px 20px;
+        margin: 0 10px;
+        background-color: #eeeeee;
+        border-radius: 5px;
+      }
+      section {
+        display: none;
+        margin: 20px 0;
+      }
+      section img {
+        width: 1000px;
+        display: block;
+        margin: 0 auto; /* 이미지를 가운데 정렬 */
+      }
+      button {
+        margin: auto;
+        color: aliceblue;
+        background-color: rgb(189, 189, 189);
+        width: 200px;
+        margin-top: 20px;
+        border: none; /* 테두리 없애기 */
+        border-radius: 5px; /* 살짝 둥글게 만들기 */
+        padding: 10px; /* 내용과의 간격 조절 */
+        cursor: pointer; /* 커서 모양 변경 */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>제품 촬영 및 작업</h1>
+    </header>
+    <!-- <nav>
+      <a href="#" onclick="showSeason(1)">2020 F/W</a>
+      <a href="#" onclick="showSeason(2)">2021 S/S</a>
+      <a href="#" onclick="showSeason(3)">2021 F/W</a>
+    </nav> -->
+
+    <section id="season1">
+      <img src="image/product_photography/jackets1.jpg" alt="" />
+      <img src="image/product_photography/jackets2.jpg" alt="" />
+      <img src="image/product_photography/coat1.jpg" alt="" />
+      <img src="image/product_photography/pants1.jpg" alt="" />
+      <button onclick="goBack()">뒤로 가기</button>
+    </section>
+    <!-- <section id="season2">
+      <h2>2021 S/S</h2>
+      <img src="image/21ss/21ssub.png" alt="룩북21ss" />
+      <img src="image/21ss/21ss.png" alt="룩북21ss" />
+    </section>
+    <section id="season3">
+      <h2>2021 F/W</h2>
+      <img src="image/21fw/21fwsub.png" alt="룩북21fw" />
+      <img src="image/21fw/21fw.png" alt="룩북21fw" />
+    </section> -->
+    <script>
+      // 페이지 로드 시 Season 1 섹션을 표시
+      document.addEventListener("DOMContentLoaded", function () {
+        showSeason(1);
+      });
+      function showSeason(seasonNumber) {
+        // 숨겨진 모든 섹션을 감춘 후, 선택된 시즌의 섹션만 보이도록 함
+        document.querySelectorAll("section").forEach((section) => {
+          section.style.display = "none";
+        });
+        document.getElementById("season" + seasonNumber).style.display =
+          "block";
+      }
+      function goBack() {
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>
