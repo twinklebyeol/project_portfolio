@@ -43,6 +43,7 @@
 
       main {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
         margin: 20px 0;
@@ -55,9 +56,8 @@
         align-items: center;
       }
       .image-container img {
-        margin-top: 30px;
         width: 400px;
-        height: 580px;
+        height: 520px;
         border-radius: 10px;
         transition: filter 0.3s ease-in-out;
         cursor: pointer;
@@ -70,6 +70,16 @@
         margin-top: 10px;
       }
 
+      @media (max-width: 768px) {
+            .image-container {
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            .image-container {
+                max-width: 100%;
+            }
+        }
       /* footer {
         text-align: center;
         padding: 10px;
@@ -83,11 +93,12 @@
   </head>
   <body>
     <header>
-      <h1>PROJECT</h1>
+      <h1>Portfoilo</h1>
     </header>
 
     <main>
       <div class="image-container">
+        <h3>LookBook</h3>
         <img
           src="image/lookbookmain.jpg"
           alt="Lookbook"
@@ -95,9 +106,9 @@
           onmouseover="hoverImage(this)"
           onmouseout="unhoverImage(this)"
         />
-        <h3>LookBook</h3>
       </div>
       <div class="image-container">
+        <h3>Retouching</h3>
         <img
           src="image/beforeaftermain.png"
           alt="Retouching"
@@ -105,9 +116,9 @@
           onmouseover="hoverImage(this)"
           onmouseout="unhoverImage(this)"
         />
-        <h3>Retouching</h3>
       </div>
       <div class="image-container">
+        <h3>Product Photo</h3>
         <img
           src="image/productmain.jpg"
           alt="Product Photo"
@@ -115,7 +126,6 @@
           onmouseover="hoverImage(this)"
           onmouseout="unhoverImage(this)"
         />
-        <h3>Product Photo</h3>
       </div>
     </main>
     <script>
